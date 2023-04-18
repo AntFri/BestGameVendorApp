@@ -1,6 +1,8 @@
 package com.antoniofrische.bestgamevendorapp.interfa;
 
 
+import com.antoniofrische.bestgamevendorapp.models.ProductosEntity;
+
 import java.util.List;
 
 import retrofit2.Call;
@@ -11,5 +13,9 @@ import retrofit2.http.GET;
 import retrofit2.http.POST;
 
 public interface IAPIService {
+    @GET("/app/productAll")
+    Call<List<ProductosEntity>> getProducts();
 
+    @GET("/app/product/{id}")
+    Call<List<ProductosEntity>> getProducts(@Field("id") long id);
 }
