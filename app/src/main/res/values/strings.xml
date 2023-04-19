@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">BestGameVendorApp</string>
+    <string name="nameProd_Placeholder">Name</string>
+    <string name="minAgeProd_Placeholder">Minimum Age</string>
+    <string name="genreProd_Placeholder">Genre</string>
+    <string name="publisherProd_Placeholder">Publisher</string>
 </resources>

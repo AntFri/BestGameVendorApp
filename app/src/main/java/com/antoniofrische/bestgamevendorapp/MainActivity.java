@@ -2,25 +2,42 @@ package com.antoniofrische.bestgamevendorapp;
 
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
+import android.widget.Toast;
 
+
+import com.antoniofrische.bestgamevendorapp.interfa.IOnClickListener;
 import com.google.android.material.bottomappbar.BottomAppBar;
 
-public class MainActivity extends AppCompatActivity {
+import java.util.Objects;
+
+public class MainActivity extends AppCompatActivity implements IOnClickListener {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        BottomAppBar bottomAppBar = findViewById(R.id.bnb_main);
-        setSupportActionBar(bottomAppBar);
+        Toolbar myToolbar = (Toolbar) findViewById(R.id.toolbar2);
+        setSupportActionBar(myToolbar);
 
+
+        Button btnOne = findViewById(R.id.button2);
+
+        btnOne.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(getApplicationContext(),"Button1",Toast.LENGTH_LONG).show();
+            }
+        });
 
     }
 
@@ -33,25 +50,29 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         Intent i;
-        /*switch(item.getItemId()) {
-            case R.id.action_countries:
-                if(idAction != R.id.action_countries) {
-                    i = new Intent(this, MainActivity.class);
-                    i.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                    startActivity(i);
-                }
-                return true;
-
-            case R.id.action_alumnos:
-                if(idAction != R.id.action_alumnos) {
-                    i = new Intent(this, AlumnosActivity.class);
-                    i.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                    startActivity(i);
-                }
-                return true;
+        switch(item.getItemId()) {
+            case R.id.option_1:
+                Toast.makeText(getApplicationContext(),"option1",Toast.LENGTH_LONG).show();
+                break;
             default:
                 return super.onOptionsItemSelected(item);
-        } */
+        }
         return false;
+    }
+
+
+    @Override
+    public void onClickProd(int position) {
+
+    }
+
+    @Override
+    public void onClickCategoria(int position) {
+
+    }
+
+    @Override
+    public void onClickAdminB(int recievID) {
+
     }
 }
