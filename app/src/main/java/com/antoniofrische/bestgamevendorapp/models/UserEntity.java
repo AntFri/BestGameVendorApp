@@ -26,11 +26,24 @@ public class UserEntity implements Serializable {
 
     private RegionEntity region;
 
+    public UserEntity() {
+    }
+
+    public UserEntity(int idUsuario, String nombre, String apellido, String email, Date fechaNacimiento, String password, String role, boolean accountActive, RegionEntity region) {
+        this.idUsuario = idUsuario;
+        this.nombre = nombre;
+        this.apellido = apellido;
+        this.email = email;
+        this.fechaNacimiento = fechaNacimiento;
+        this.password = password;
+        this.role = role;
+        this.accountActive = accountActive;
+        this.region = region;
+    }
+
     public int getIdUsuario() {
         return idUsuario;
     }
-
-
 
     public String getNombre() {
         return nombre;

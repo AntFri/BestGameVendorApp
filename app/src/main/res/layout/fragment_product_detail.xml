@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="2">
+
+        <TextView
+            android:id="@+id/tvNameProductDPlaceholder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/nameProd_Placeholder"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.108"
+            app:layout_constraintStart_toEndOf="@+id/ivProdDIMG"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.057" />
+
+        <TextView
+            android:id="@+id/tvNameProductD"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            app:layout_constraintStart_toEndOf="@+id/tvNameProductDPlaceholder"
+            app:layout_constraintTop_toTopOf="@+id/tvNameProductDPlaceholder" />
+
+        <TextView
+            android:id="@+id/tvProdDMinAgePlaceholder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/minAgeProd_Placeholder"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/tvNameProductDPlaceholder"
+            app:layout_constraintTop_toBottomOf="@+id/tvNameProductDPlaceholder" />
+
+        <ImageView
+            android:id="@+id/ivProdDIMG"
+            android:layout_width="150dp"
+            android:layout_height="250dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.056"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.094"
+            tools:srcCompat="@tools:sample/avatars" />
+
+        <TextView
+            android:id="@+id/tvProdDMinAge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            app:layout_constraintStart_toEndOf="@+id/tvProdDMinAgePlaceholder"
+            app:layout_constraintTop_toTopOf="@+id/tvProdDMinAgePlaceholder" />
+
+        <TextView
+            android:id="@+id/tvProdDReleaseDatePlaceholder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/releaseDateProd_Placeholder"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/tvProdDMinAgePlaceholder"
+            app:layout_constraintTop_toBottomOf="@+id/tvProdDMinAgePlaceholder" />
+
+        <TextView
+            android:id="@+id/tvProdDReleasePricePlaceholder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/releasePriceProd_Placeholder"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/tvProdDReleaseDatePlaceholder"
+            app:layout_constraintTop_toBottomOf="@+id/tvProdDReleaseDatePlaceholder" />
+
+        <TextView
+            android:id="@+id/tvProdDPublisherNamePlaceholder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/publisherProd_Placeholder"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/tvProdDReleasePricePlaceholder"
+            app:layout_constraintTop_toBottomOf="@+id/tvProdDReleasePricePlaceholder" />
+
+        <TextView
+            android:id="@+id/tvProdDGanreNamePlaceholder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/genreProd_Placeholder"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/tvProdDPublisherNamePlaceholder"
+            app:layout_constraintTop_toBottomOf="@+id/tvProdDPublisherNamePlaceholder" />
+
+        <TextView
+            android:id="@+id/tvProdDRegionNamePlaceholder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/regionProd_Placeholder"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/tvProdDGanreNamePlaceholder"
+            app:layout_constraintTop_toBottomOf="@+id/tvProdDGanreNamePlaceholder" />
+
+        <TextView
+            android:id="@+id/tvProdDReleaseDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            app:layout_constraintStart_toEndOf="@+id/tvProdDReleaseDatePlaceholder"
+            app:layout_constraintTop_toTopOf="@+id/tvProdDReleaseDatePlaceholder" />
+
+        <TextView
+            android:id="@+id/tvProdDReleasePrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            app:layout_constraintStart_toEndOf="@+id/tvProdDReleasePricePlaceholder"
+            app:layout_constraintTop_toTopOf="@+id/tvProdDReleasePricePlaceholder" />
+
+        <TextView
+            android:id="@+id/tvProdDPublisherName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            app:layout_constraintStart_toEndOf="@+id/tvProdDPublisherNamePlaceholder"
+            app:layout_constraintTop_toTopOf="@+id/tvProdDPublisherNamePlaceholder" />
+
+        <TextView
+            android:id="@+id/tvProdDGenreName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            app:layout_constraintStart_toEndOf="@+id/tvProdDGanreNamePlaceholder"
+            app:layout_constraintTop_toTopOf="@+id/tvProdDGanreNamePlaceholder" />
+
+        <TextView
+            android:id="@+id/tvProdDRegionName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            app:layout_constraintStart_toEndOf="@+id/tvProdDRegionNamePlaceholder"
+            app:layout_constraintTop_toTopOf="@+id/tvProdDRegionNamePlaceholder" />
+
+        <TextView
+            android:id="@+id/tvProdDDescriptionPlaceholder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/descriptionProd_Placeholder"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/ivProdDIMG"
+            app:layout_constraintTop_toBottomOf="@+id/ivProdDIMG" />
+
+        <TextView
+            android:id="@+id/tvProdDDescription"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="32dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/tvProdDDescriptionPlaceholder"
+            app:layout_constraintTop_toBottomOf="@+id/tvProdDDescriptionPlaceholder" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ListView
+        android:id="@+id/lvProdDPlatform"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="3" />
+
+    <ListView
+        android:id="@+id/lvProdDSalles"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="3" />
+</LinearLayout>

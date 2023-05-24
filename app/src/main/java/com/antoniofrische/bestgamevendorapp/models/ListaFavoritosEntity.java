@@ -18,11 +18,19 @@ public class ListaFavoritosEntity {
 
     private Set<ProductosEntity> productlist;
 
+    public ListaFavoritosEntity() {
+    }
+
+    public ListaFavoritosEntity(int idFavoritos, String nombre, UserEntity user, Set<ProductosEntity> productlist) {
+        this.idFavoritos = idFavoritos;
+        this.nombre = nombre;
+        this.user = user;
+        this.productlist = productlist;
+    }
+
     public int getIdFavoritos() {
         return idFavoritos;
     }
-
-
 
     public String getNombre() {
         return nombre;

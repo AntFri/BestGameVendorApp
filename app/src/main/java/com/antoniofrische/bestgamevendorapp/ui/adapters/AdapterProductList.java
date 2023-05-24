@@ -15,11 +15,11 @@ import com.antoniofrische.bestgamevendorapp.models.ProductosEntity;
 import java.text.SimpleDateFormat;
 import java.util.List;
 
-public class AdapterProducts extends RecyclerView.Adapter<AdapterProducts.ProductViewHolder> {
+public class AdapterProductList extends RecyclerView.Adapter<AdapterProductList.ProductViewHolder> {
     private List<ProductosEntity> products;
     private final IOnClickListener listener;
 
-    public AdapterProducts(List<ProductosEntity> products, IOnClickListener listener) {
+    public AdapterProductList(List<ProductosEntity> products, IOnClickListener listener) {
 
         this.products = products;
         this.listener = listener;
@@ -32,7 +32,7 @@ public class AdapterProducts extends RecyclerView.Adapter<AdapterProducts.Produc
     @NonNull
     @Override
     public ProductViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View itemView = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_product, parent, false);
+        View itemView = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_product_list, parent, false);
         return new ProductViewHolder(itemView, listener);
     }
 
@@ -44,7 +44,6 @@ public class AdapterProducts extends RecyclerView.Adapter<AdapterProducts.Produc
 
     @Override
     public int getItemCount() {
-
         return products.size();
     }
 
@@ -73,7 +72,7 @@ public class AdapterProducts extends RecyclerView.Adapter<AdapterProducts.Produc
 
             tvProdName.setText(prod.getNombre());
 
-            tvProdMinAge.setText(sdf.format(prod.getFechaSalida()));
+            tvProdMinAge.setText(String.valueOf(prod.getEdadMinima()));
 
             tvProdGenreName.setText(prod.getGenre().getNombre());
 

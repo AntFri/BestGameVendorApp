@@ -14,15 +14,27 @@ public class PlataformasEntity {
 
     private String nombre;
 
-    private LocalDate fechaSalida;
+    private String fechaSalida;
 
     private String descripcion;
 
     private Set<ProductosEntity> prodlist;
 
-    public void setIdPlataformas(int idPlataformas) {
-        this.idPlataformas = idPlataformas;
+    public PlataformasEntity() {
     }
+
+    public PlataformasEntity(int idPlataformas, String nombre, String fechaSalida, String descripcion, Set<ProductosEntity> prodlist) {
+        this.idPlataformas = idPlataformas;
+        this.nombre = nombre;
+        this.fechaSalida = fechaSalida;
+        this.descripcion = descripcion;
+        this.prodlist = prodlist;
+    }
+
+    public int getIdPlataformas() {
+        return idPlataformas;
+    }
+
 
     public String getNombre() {
         return nombre;
@@ -32,11 +44,11 @@ public class PlataformasEntity {
         this.nombre = nombre;
     }
 
-    public LocalDate getFechaSalida() {
+    public String getFechaSalida() {
         return fechaSalida;
     }
 
-    public void setFechaSalida(LocalDate fechaSalida) {
+    public void setFechaSalida(String fechaSalida) {
         this.fechaSalida = fechaSalida;
     }
 

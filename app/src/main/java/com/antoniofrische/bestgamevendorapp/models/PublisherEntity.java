@@ -12,17 +12,27 @@ public class PublisherEntity {
 
     private String nombre;
 
-    private LocalDate fechaInauguracion;
+    private String fechaInauguracion;
 
     private String descripcion;
 
     private RegionEntity origenContry;
 
+
+    public PublisherEntity() {
+    }
+
+    public PublisherEntity(int idPublisher, String nombre, String fechaInauguracion, String descripcion, RegionEntity origenContry) {
+        this.idPublisher = idPublisher;
+        this.nombre = nombre;
+        this.fechaInauguracion = fechaInauguracion;
+        this.descripcion = descripcion;
+        this.origenContry = origenContry;
+    }
+
     public int getIdPublisher() {
         return idPublisher;
     }
-
-
 
     public String getNombre() {
         return nombre;
@@ -32,11 +42,11 @@ public class PublisherEntity {
         this.nombre = nombre;
     }
 
-    public LocalDate getFechaInauguracion() {
+    public String getFechaInauguracion() {
         return fechaInauguracion;
     }
 
-    public void setFechaInauguracion(LocalDate fechaInauguracion) {
+    public void setFechaInauguracion(String fechaInauguracion) {
         this.fechaInauguracion = fechaInauguracion;
     }
 

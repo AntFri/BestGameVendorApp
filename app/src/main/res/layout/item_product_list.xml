@@ -9,9 +9,11 @@
         android:id="@+id/tvProdLNamePlaceholder"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
+        android:layout_marginStart="8dp"
         android:layout_marginTop="16dp"
         android:text="@string/nameProd_Placeholder"
+        android:textSize="16sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -23,34 +25,44 @@
         android:id="@+id/tvProdLName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"
         android:layout_marginBottom="8dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/tvProdLNamePlaceholder"
-        app:layout_constraintTop_toBottomOf="@+id/tvProdLNamePlaceholder" />
+        app:layout_constraintBottom_toBottomOf="@+id/tvProdLNamePlaceholder"
+        app:layout_constraintStart_toEndOf="@+id/tvProdLNamePlaceholder"
+        app:layout_constraintTop_toTopOf="@+id/tvProdLNamePlaceholder"
+        app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/tvProdLMinAgePlaceholder"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
+        android:layout_marginTop="8dp"
         android:text="@string/minAgeProd_Placeholder"
-        app:layout_constraintStart_toEndOf="@+id/tvProdLNamePlaceholder"
-        app:layout_constraintTop_toTopOf="@+id/tvProdLNamePlaceholder" />
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/tvProdLNamePlaceholder"
+        app:layout_constraintTop_toBottomOf="@+id/tvProdLNamePlaceholder" />
 
     <TextView
         android:id="@+id/tvProdLMinAge"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="@+id/tvProdLMinAgePlaceholder"
-        app:layout_constraintTop_toTopOf="@+id/tvProdLName" />
+        app:layout_constraintTop_toBottomOf="@+id/tvProdLMinAgePlaceholder"
+        app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/tvgenreProdLPlaceholder"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="28dp"
+        android:layout_marginStart="44dp"
         android:text="@string/genreProd_Placeholder"
+        android:textSize="16sp"
+        android:textStyle="bold"
         app:layout_constraintStart_toEndOf="@+id/tvProdLMinAgePlaceholder"
         app:layout_constraintTop_toTopOf="@+id/tvProdLMinAgePlaceholder" />
 
@@ -65,8 +77,10 @@
         android:id="@+id/tvPublisherProdLPlaceholder"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
+        android:layout_marginStart="52dp"
         android:text="@string/publisherProd_Placeholder"
+        android:textSize="16sp"
+        android:textStyle="bold"
         app:layout_constraintStart_toEndOf="@+id/tvgenreProdLPlaceholder"
         app:layout_constraintTop_toTopOf="@+id/tvgenreProdLPlaceholder" />
 

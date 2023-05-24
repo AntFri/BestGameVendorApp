@@ -3,7 +3,6 @@ package com.antoniofrische.bestgamevendorapp.models;
 
 
 
-import java.time.LocalDate;
 import java.util.Objects;
 import java.util.Set;
 
@@ -15,11 +14,11 @@ public class ProductosEntity {
 
     private int edadMinima;
 
-    private String photoProducto;
+    private ProductImageEntity productimage;
 
     private String descripcion;
 
-    private LocalDate fechaSalida;
+    private String fechaSalida;
 
     private Double precioSalida;
 
@@ -29,9 +28,25 @@ public class ProductosEntity {
 
     private RegionEntity region;
 
-    private Set<ListaFavoritosEntity> listaFav;
-
     private Set<PlataformasEntity> platformList;
+
+    public ProductosEntity() {
+    }
+
+    public ProductosEntity(int idProductos, String nombre, int edadMinima, ProductImageEntity productimage, String descripcion, String fechaSalida, Double precioSalida, PublisherEntity publisher, GenreEntity genre, RegionEntity region, Set<PlataformasEntity> platformList) {
+        this.idProductos = idProductos;
+        this.nombre = nombre;
+        this.edadMinima = edadMinima;
+        this.productimage = productimage;
+        this.descripcion = descripcion;
+        this.fechaSalida = fechaSalida;
+        this.precioSalida = precioSalida;
+        this.publisher = publisher;
+        this.genre = genre;
+        this.region = region;
+
+        this.platformList = platformList;
+    }
 
     public int getIdProductos() {
         return idProductos;
@@ -53,12 +68,12 @@ public class ProductosEntity {
         this.edadMinima = edadMinima;
     }
 
-    public String getPhotoProducto() {
-        return photoProducto;
+    public ProductImageEntity getProductimage() {
+        return productimage;
     }
 
-    public void setPhotoProducto(String photoProducto) {
-        this.photoProducto = photoProducto;
+    public void setProductimage(ProductImageEntity productimage) {
+        this.productimage = productimage;
     }
 
     public String getDescripcion() {
@@ -69,11 +84,12 @@ public class ProductosEntity {
         this.descripcion = descripcion;
     }
 
-    public LocalDate getFechaSalida() {
+
+    public String getFechaSalida() {
         return fechaSalida;
     }
 
-    public void setFechaSalida(LocalDate fechaSalida) {
+    public void setFechaSalida(String fechaSalida) {
         this.fechaSalida = fechaSalida;
     }
 
@@ -109,14 +125,6 @@ public class ProductosEntity {
         this.region = fkRegion;
     }
 
-    public Set<ListaFavoritosEntity> getListaFav() {
-        return listaFav;
-    }
-
-    public void setListaFav(Set<ListaFavoritosEntity> listaFav) {
-        this.listaFav = listaFav;
-    }
-
     public Set<PlataformasEntity> getPlatformList() {
         return platformList;
     }
@@ -130,12 +138,12 @@ public class ProductosEntity {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         ProductosEntity that = (ProductosEntity) o;
-        return idProductos == that.idProductos && edadMinima == that.edadMinima && publisher == that.publisher && genre == that.genre && region == that.region && Objects.equals(nombre, that.nombre) && Objects.equals(photoProducto, that.photoProducto) && Objects.equals(descripcion, that.descripcion) && Objects.equals(fechaSalida, that.fechaSalida) && Objects.equals(precioSalida, that.precioSalida);
+        return idProductos == that.idProductos && edadMinima == that.edadMinima && publisher == that.publisher && genre == that.genre && region == that.region && Objects.equals(nombre, that.nombre) && Objects.equals(productimage, that.productimage) && Objects.equals(descripcion, that.descripcion) && Objects.equals(fechaSalida, that.fechaSalida) && Objects.equals(precioSalida, that.precioSalida);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(idProductos, nombre, edadMinima, photoProducto, descripcion, fechaSalida, precioSalida, publisher, genre, region);
+        return Objects.hash(idProductos, nombre, edadMinima, productimage, descripcion, fechaSalida, precioSalida, publisher, genre, region);
     }
 
     @Override
@@ -144,14 +152,13 @@ public class ProductosEntity {
                 "idProductos=" + idProductos +
                 ", nombre='" + nombre + '\'' +
                 ", edadMinima=" + edadMinima +
-                ", photoProducto='" + photoProducto + '\'' +
+                ", photoProducto='" + productimage.getImgURL() + '\'' +
                 ", descripcion='" + descripcion + '\'' +
                 ", fechaSalida=" + fechaSalida +
                 ", precioSalida=" + precioSalida +
                 ", publisher=" + publisher +
                 ", genre=" + genre +
                 ", region=" + region +
-                ", listaFav=" + listaFav +
                 ", platformList=" + platformList +
                 '}';
     }

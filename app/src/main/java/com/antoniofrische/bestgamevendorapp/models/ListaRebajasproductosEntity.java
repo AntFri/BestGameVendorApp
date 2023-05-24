@@ -18,11 +18,21 @@ public class ListaRebajasproductosEntity {
 
     private ProductosEntity productos;
 
+    public ListaRebajasproductosEntity() {
+    }
+
+    public ListaRebajasproductosEntity(int idListaRebajas, LocalDate fechaCambio, Double precioRebajas, int percentageRebajas, CellingWebsiteEntity cellingwebsite, ProductosEntity productos) {
+        this.idListaRebajas = idListaRebajas;
+        this.fechaCambio = fechaCambio;
+        this.precioRebajas = precioRebajas;
+        this.percentageRebajas = percentageRebajas;
+        this.cellingwebsite = cellingwebsite;
+        this.productos = productos;
+    }
+
     public int getIdListaRebajas() {
         return idListaRebajas;
     }
-
-
 
     public LocalDate getFechaCambio() {
         return fechaCambio;

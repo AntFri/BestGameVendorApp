@@ -2,6 +2,7 @@ package com.antoniofrische.bestgamevendorapp.ui.fragments;
 
 import android.content.Context;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Toast;
 
@@ -13,11 +14,10 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.antoniofrische.bestgamevendorapp.R;
 import com.antoniofrische.bestgamevendorapp.interfa.IAPIService;
-import com.antoniofrische.bestgamevendorapp.interfa.IOnAttachListener;
 import com.antoniofrische.bestgamevendorapp.interfa.IOnClickListener;
 import com.antoniofrische.bestgamevendorapp.models.ProductosEntity;
 import com.antoniofrische.bestgamevendorapp.rest.RestClient;
-import com.antoniofrische.bestgamevendorapp.ui.adapters.AdapterProducts;
+import com.antoniofrische.bestgamevendorapp.ui.adapters.AdapterProductList;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -26,15 +26,15 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-public class FragmentProduct extends Fragment {
+public class FragmentProductList extends Fragment {
 
     private IOnClickListener clickListener;
     private List<ProductosEntity> productList;
-    private AdapterProducts adapterProducts;
+    private AdapterProductList adapterProducts;
     private final IAPIService apiService = RestClient.getInstance();
 
-    public FragmentProduct(){
-        super(R.layout.fragment_products);
+    public FragmentProductList(){
+        super(R.layout.fragment_product_list);
     }
 
     @Override
@@ -56,10 +56,11 @@ public class FragmentProduct extends Fragment {
             @Override
             public void onFailure(@NonNull Call<List<ProductosEntity>> call, @NonNull Throwable t) {
                 Toast.makeText(getContext(), t.getMessage(), Toast.LENGTH_LONG).show();
+                Log.e("Product Error",t.getMessage(),t);
             }
         });
 
-        adapterProducts = new AdapterProducts(productList, clickListener);
+        adapterProducts = new AdapterProductList(productList, clickListener);
         RecyclerView recyclerView = view.findViewById(R.id.rcvProducts);
         recyclerView.setHasFixedSize(true);
         recyclerView.setAdapter(adapterProducts);

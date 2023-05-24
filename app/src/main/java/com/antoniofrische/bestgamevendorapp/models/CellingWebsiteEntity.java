@@ -13,6 +13,15 @@ public class CellingWebsiteEntity {
 
     private String link;
 
+    public CellingWebsiteEntity() {
+    }
+
+    public CellingWebsiteEntity(int idcellingWebsite, String nombre, String link) {
+        this.idcellingWebsite = idcellingWebsite;
+        this.nombre = nombre;
+        this.link = link;
+    }
+
     public int getIdcellingWebsite() {
         return idcellingWebsite;
     }

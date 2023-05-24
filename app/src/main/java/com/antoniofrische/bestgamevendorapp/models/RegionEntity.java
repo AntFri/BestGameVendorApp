@@ -14,11 +14,18 @@ public class RegionEntity implements Serializable {
 
     private String descripcion;
 
+    public RegionEntity() {
+    }
+
+    public RegionEntity(int idRegion, String nombre, String descripcion) {
+        this.idRegion = idRegion;
+        this.nombre = nombre;
+        this.descripcion = descripcion;
+    }
+
     public int getIdRegion() {
         return idRegion;
     }
-
-
 
     public String getNombre() {
         return nombre;

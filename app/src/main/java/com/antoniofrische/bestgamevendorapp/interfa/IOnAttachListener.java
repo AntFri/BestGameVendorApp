@@ -1,7 +1,9 @@
 package com.antoniofrische.bestgamevendorapp.interfa;
 
 
-public interface IOnAttachListener {
+import com.antoniofrische.bestgamevendorapp.models.ProductosEntity;
 
+public interface IOnAttachListener {
+    ProductosEntity getProduct();
 }
 

@@ -4,4 +4,10 @@
     <string name="minAgeProd_Placeholder">Minimum Age</string>
     <string name="genreProd_Placeholder">Genre</string>
     <string name="publisherProd_Placeholder">Publisher</string>
+    <string name="regionProd_Placeholder">Region</string>
+    <string name="releaseDateProd_Placeholder">Release Date</string>
+    <string name="releasePriceProd_Placeholder">Release price</string>
+    <string name="descriptionProd_Placeholder">Description</string>
+    <string name="home_image">Home Image</string>
+    <string name="search_image">Search image</string>
 </resources>

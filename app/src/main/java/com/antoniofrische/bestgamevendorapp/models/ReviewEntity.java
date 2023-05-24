@@ -16,11 +16,20 @@ public class ReviewEntity {
 
     private ProductosEntity product;
 
+    public ReviewEntity() {
+    }
+
+    public ReviewEntity(int idReview, String reviewText, String reviewRating, UserEntity user, ProductosEntity product) {
+        this.idReview = idReview;
+        this.reviewText = reviewText;
+        this.reviewRating = reviewRating;
+        this.user = user;
+        this.product = product;
+    }
+
     public int getIdReview() {
         return idReview;
     }
-
-
 
     public String getReviewText() {
         return reviewText;

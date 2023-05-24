@@ -13,11 +13,18 @@ public class GenreEntity {
 
     private String descripcion;
 
+    public GenreEntity() {
+    }
+
+    public GenreEntity(int idGenre, String nombre, String descripcion) {
+        this.idGenre = idGenre;
+        this.nombre = nombre;
+        this.descripcion = descripcion;
+    }
+
     public int getIdGenre() {
         return idGenre;
     }
-
-
 
     public String getNombre() {
         return nombre;
